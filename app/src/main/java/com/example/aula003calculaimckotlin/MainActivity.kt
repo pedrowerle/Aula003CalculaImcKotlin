@@ -2,6 +2,8 @@ package com.example.aula003calculaimckotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -47,7 +49,48 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        if (savedInstanceState != null) {
+            val imc = savedInstanceState.getString("imc")
+            tvResultado.text = imc
+        }
+
     } // fim do create
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("Ciclo de vida", "onStart() executable")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("Ciclo de vida", "onResume() executable")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("Ciclo de vida", "onPause() executable")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("Ciclo de vida", "onRestart() executable")
+    }
+    override fun onStop() {
+        super.onStop()
+        Log.d("Ciclo de vida", "onStop() executable")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("Ciclo de vida", "onDestroy() executable")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        if (tvResultado.text.toString() != ""){
+            outState.putString("imc", tvResultado.text.toString())
+        }
+    }
 
     private fun btCalcularOnClick() {
         if (etPeso.text.toString().isEmpty()) {
