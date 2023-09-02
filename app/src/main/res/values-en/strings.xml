@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Calculator in Kotlin</string>
+    <string name="altura_error">Please fill your height</string>
+    <string name="peso_error">Please fill your weight</string>
+    <string name="limpar_informativo">Press the button to clear all fields</string>
+    <string name="label_peso">Weight:</string>
+    <string name="label_altura">Height:</string>
+    <string name="hint_peso">Weight in pounds</string>
+    <string name="hint_altura">Height in ft\'</string>
+    <string name="label_imc">BMI:</string>
+    <string name="zeros">0.0</string>
+    <string name="calcular">Calculate</string>
+    <string name="limpar">Clear</string>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="altura_error">Informe sua altura</string>
+    <string name="peso_error">Informe o seu peso</string>
+    <string name="limpar_informativo">Botão para limpar</string>
+    <string name="label_peso">Peso:</string>
+    <string name="label_altura">Altura:</string>
+    <string name="hint_peso">Insira seu peso em Kg</string>
+    <string name="hint_altura">Insira sua altura</string>
+    <string name="label_imc">IMC:</string>
+    <string name="zeros">0.0</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpar">Limpar</string>
+    <string name="app_name">Calculadora de IMC em Kotlin</string>
+
+</resources>

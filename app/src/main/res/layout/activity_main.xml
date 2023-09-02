@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_peso"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint_peso"
+        android:textColorHint="#8D6E63"
+        app:layout_constraintStart_toEndOf="@id/tvPeso"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tvAltura"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_altura"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="@id/tvPeso"
+        app:layout_constraintTop_toBottomOf="@id/tvPeso" />
+
+    <EditText
+        android:id="@+id/etAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint_altura"
+        android:textColorHint="#8D6E63"
+        app:layout_constraintStart_toEndOf="@id/tvPeso"
+        app:layout_constraintTop_toBottomOf="@id/etPeso"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tvImc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_imc"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAltura" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/zeros"
+        android:padding="16dp"
+        app:layout_constraintStart_toEndOf="@id/tvImc"
+        app:layout_constraintTop_toBottomOf="@id/tvAltura" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="@id/tvResultado"
+        app:layout_constraintTop_toBottomOf="@id/tvImc"/>
+
+    <Space
+        android:id="@+id/espaco"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintStart_toEndOf="@id/btCalcular"
+        app:layout_constraintBottom_toBottomOf="@id/btCalcular"/>
+
+    <Button
+        android:id="@+id/btLimpar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/limpar"
+        android:padding="16dp"
+        app:layout_constraintStart_toEndOf="@id/espaco"
+        app:layout_constraintTop_toBottomOf="@id/tvResultado" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
